@@ -148,6 +148,9 @@ func (s *Screen) parseCSISequence(p []byte) []byte {
 	if ok {
 		funcName(s, params)
 	} else {
+		log.Printf("\np is ", p)
+		log.Printf("\np[endindex] is ", p[endIndex])
+		log.Printf("\nrune(p[endindex]) is ", rune(p[endIndex]))
 		log.Printf("screen未处理的CSI %s %q\n", DebugString(string(params)), p[endIndex])
 	}
 

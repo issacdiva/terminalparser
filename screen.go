@@ -65,6 +65,12 @@ func (s *Screen) Parse(data []byte) []string {
 			}
 			continue
 		case Delete:
+			log.Printf("\n code is %v", code)
+			log.Printf("\n s is %v", s)
+			log.Printf("\n s.Rows is %v", s.Rows)
+			log.Printf("\n s.Cursor is %v", s.Cursor)
+			log.Printf("\n rest is %v", rest)
+			
 			continue
 		default:
 			if existIndex := bytes.IndexRune([]byte(string(C0Control)), code); existIndex >= 0 {

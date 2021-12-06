@@ -1,4 +1,4 @@
-module github.com/LeeEirc/terminalparser
+module github.com/issacdiva/terminalparser
 
 go 1.15
 
